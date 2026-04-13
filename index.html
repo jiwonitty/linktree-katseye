@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <div class="card">
+    <div class="cover"></div>
+    <div class="avatar"></div>
+    <div class="info">
+      <h1> KATSEYE </h1>
+      <p>Welcome to KATSEYE world
+      </p>
+    </div>
+    <div class="links">
+      <a href="https://youtu.be/7F1ET2XHQfk?si=fuStnMmy4n9SZDIU" class="link-item
+        highlight">
+        <div class="mini-cover" style="background-image:url('pinky.jpg');"></div>
+        <span>PINKY UP</span>
+        <span class="material-symbols-outlined">north_east</span>
+      </a>
+      <a href="https://youtu.be/co-TFLbaZAE?si=glp0_PFJWwqJhMWp" class="link-item btn-gabriela">
+        <div class="mini-cover" style="background-image:url('gabriela.jpg');"></div>
+        <span>Gabriela</span>
+         <span class="material-symbols-outlined">north_east</span>
+      </a>
+      <a href="https://youtu.be/R2-yomhYAj4?si=YstYu8B7hobSu40b" class="link-item btn-gnarly">
+        <div class="mini-cover" style="background-image:url('gnarly.jpg')";></div>
+        <span>Gnarly</span>
+        <span class="material-symbols-outlined">north_east</span>
+      </a>
+      <a href="https://youtu.be/5q9EjSUovc4?si=LWOXDsoqHbHNlRnc" class="link-item btn-internet">
+        <div class="mini-cover" style="background-image:url('internet.jpg')";></div>
+        <span>Internet Girl</span>
+        <span class="material-symbols-outlined">north_east</span>
+      </a>
+      <a href="https://youtu.be/-bC4iak3kxg?si=Dr75rllYABji1_RG" class="link-item btn-gameboy">
+        <div class="mini-cover" style="background-image:url('gameboy.jpg')";></div>
+        <span>Gameboy</span>
+        <span class="material-symbols-outlined">north_east</span>
+      </a>
+    </div>
+    <footer class="footer-links">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/katseyeworld?igsh=MXF6aG01MDJuaDhxOA=="><span class="material-symbols-outlined">brand_family</span></a>
+        <a href="https://open.spotify.com/artist/3c0gDdb9lhnHGFtP4prQpn?si=U2WRiLHOQ-ukFx1OtUyGCw"><span class="material-symbols-outlined">play_circle</span></a>
+        <a href="javascript:void(0)"
+          id="share-btn"><span class="material-symbols-outlined">share</span></a>
+      </div>
+    <p>© 2026 KATSEYE World. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+  const shareBtn = document.getElementById('share-btn');
+
+  shareBtn.addEventListener('click', async () => {
+    // Verifica se o navegador suporta a função de compartilhar
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'KATSEYE World', // Título que aparece no compartilhamento
+          text: 'Confira o Linktree oficial das KATSEYE!', // Pequena descrição
+          url: window.location.href // Pega o link automaticamente
+        });
+        console.log('Compartilhado com sucesso!');
+      } catch (err) {
+        console.log('O usuário cancelou ou houve um erro:', err);
+      }
+    } else {
+      // Caso o navegador seja antigo e não suporte o Share nativo, 
+      // apenas copia o link para a área de transferência.
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copiado para a área de transferência!');
+    }
+  });
+</script>
+
+</body>
+</html>

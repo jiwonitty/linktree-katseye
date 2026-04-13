@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw; /* Garante que ocupe a largura total da tela */
+  margin: 0;
+}
+
+
+
+.card {
+  border-radius: 30px;
+  width: 400px;
+  min-height: 500px;
+  background-color: black;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  .links, .info, .footer {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+}
+
+.cover {
+  width: 100%;
+  height: 120px;
+  background-image: url('banner.jpg'); 
+  background-size: cover;
+  background-position: center 20%;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-image: url('avatar.png'); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 4px solid black;
+  margin: -50px auto 0 auto;
+  position: relative; /* Corrigido de posiyion */
+}
+
+.info {
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.info h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 10px 0 5px 0;
+  font-size: 24px;
+  color: yellow;
+}
+.info p {
+  font-size: 14px;
+  color: whitesmoke;
+  line-height: 1.5;
+}
+
+.links {
+  padding: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-item {
+  display: flex;
+  justify-content: flex-start; /* ISSO empurra a seta para a direita */
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+  box-sizing: border-box; /* Garante que o padding não aumente o botão */
+}
+
+.link-item:hover {
+  background-color: #FF1493;
+  color: white;
+  border-color: #FF1493;
+  transform: translateY(-2px);
+}
+
+.highlight {
+  background-color: #FF1493;
+  color: white;
+  border: none;
+}
+
+.highlight:hover {
+  background-color: #FF1493;
+  color: white;
+}
+.btn-gabriela:hover {
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+.btn-gnarly:hover {
+  background-color: #00ff00 !important;
+  border-color: #00ff00 !important;
+}
+.btn-internet:hover {
+  background-color: #0000ff !important;
+  border-color: #0000ff !important;
+}
+.btn-gameboy:hover {
+  background-color: #8a2be2 !important;
+  border-color: #8a2be2 !important;
+}
+
+.link-item:hover {
+  color: white !important;
+}
+
+.link-item:hover .material-symbols-outlined {
+  color: white !important;
+}
+.link-item:active {
+  transition: 0.1s;
+  transform: scale(0.95);
+}
+
+/* ESTILIZAÇÃO DA SETA - Corrigida para bater com o seu HTML */
+.material-symbols-outlined {
+  width: 32px;
+  height: 32px;
+  min-width: 32px; /* Impede que o círculo achate */
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  transition: 0.3s;
+  margin-left: auto;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-size: 20px !important;
+  color: #000; /* Cor da seta dentro do círculo */
+  display: flex;
+}
+
+/* Seta específica dentro do botão preto */
+.highlight .material-symbols-outlined {
+  background-color: white;
+  color: black;
+}
+
+/* Efeito na seta quando passa o mouse no botão */
+.link-item:hover .material-symbols-outlined {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+.mini-cover {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.footer-links {
+  margin-top: -10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.footer-links p {
+  color: whitesmoke;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.custom-icon:hover {
+  filter: none; /* Mostra a cor original (Verde Spotify/Colorido Insta) */
+  transform: scale(1.1);
+}
+#share-btn .material-symbols-outlined {
+  font-size: 24px;
+}
+.social-icons a {
+  text-decoration: none;
+}
+.social-icons a:hover .material-symbols-outlined {
+  color: #FF1493 !important; /* Brilha em rosa ao passar o mouse */
+  transform: scale(1.1);
+}
