@@ -27,28 +27,24 @@
       <p>© 2026 KATSEYE World. All rights reserved.</p>
     </footer>
   </div>
-
   <script>
     // FUNÇÃO PARA CARREGAR LINKS DO JSON
     async function carregarLinks() {
       try {
         const resposta = await fetch('links.json?v=' + Date.now());
+        
+        if (!resposta.ok) throw new Error('Erro ao carregar arquivo JSON');
+        
         const links = await resposta.json();
         const container = document.getElementById('links-container');
         container.innerHTML = ''; 
 
         links.forEach(link => {
-          // Ele vai pegar a classe de destaque (rosa) OU a classe específica (gabriela, gnarly, etc)
-const classeCor = link.destaque ? 'highlight' : link.classe;
+          // Define se usa a classe de destaque ou a classe específica de cor
+          const classeCor = link.destaque ? 'highlight' : link.classe;
 
-container.innerHTML += `
-  <a href="${link.url}" class="link-item ${classeCor}">
-    <div class="mini-cover" style="background-image:url('${link.imagem}');"></div>
-    <span>${link.nome}</span>
-    <span class="material-symbols-outlined">north_east</span>
-  </a>
-`;
-
+          container.innerHTML += `
+            <a href="${link.url}" class="link-item ${classeCor}">
               <div class="mini-cover" style="background-image:url('${link.imagem}');"></div>
               <span>${link.nome}</span>
               <span class="material-symbols-outlined">north_east</span>
@@ -59,9 +55,10 @@ container.innerHTML += `
         console.error("Erro ao carregar links:", erro);
       }
     }
+    
     carregarLinks();
 
-    // SCRIPT DO BOTÃO SHARE (MANTIDO)
+    // SCRIPT DO BOTÃO SHARE
     const shareBtn = document.getElementById('share-btn');
     shareBtn.addEventListener('click', async () => {
       if (navigator.share) {
@@ -78,5 +75,7 @@ container.innerHTML += `
       }
     });
   </script>
+
+  
 </body>
 </html>
