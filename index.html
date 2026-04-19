@@ -38,9 +38,17 @@
         container.innerHTML = ''; 
 
         links.forEach(link => {
-          const classeDestaque = link.destaque ? 'highlight' : '';
-          container.innerHTML += `
-            <a href="${link.url}" class="link-item ${classeDestaque}">
+          // Ele vai pegar a classe de destaque (rosa) OU a classe específica (gabriela, gnarly, etc)
+const classeCor = link.destaque ? 'highlight' : link.classe;
+
+container.innerHTML += `
+  <a href="${link.url}" class="link-item ${classeCor}">
+    <div class="mini-cover" style="background-image:url('${link.imagem}');"></div>
+    <span>${link.nome}</span>
+    <span class="material-symbols-outlined">north_east</span>
+  </a>
+`;
+
               <div class="mini-cover" style="background-image:url('${link.imagem}');"></div>
               <span>${link.nome}</span>
               <span class="material-symbols-outlined">north_east</span>
