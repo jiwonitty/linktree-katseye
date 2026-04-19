@@ -32,7 +32,7 @@
     // FUNÇÃO PARA CARREGAR LINKS DO JSON
     async function carregarLinks() {
       try {
-        const resposta = await fetch('links.json');
+        const resposta = await fetch('links.json?v=' + Date.now());
         const links = await resposta.json();
         const container = document.getElementById('links-container');
         container.innerHTML = ''; 
