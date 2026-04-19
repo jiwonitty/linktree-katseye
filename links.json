@@ -1,12 +1,14 @@
 [
   {
     "nome": "PINKY UP",
-    "url": "https://spotify.com/...",
+    "url": "https://youtu.be/...",
+    "imagem": "pinky.jpg",
     "destaque": true
   },
   {
-    "nome": "Instagram",
-    "url": "https://instagram.com/...",
+    "nome": "Gabriela",
+    "url": "https://youtu.be/...",
+    "imagem": "gabriela.jpg",
     "destaque": false
   }
 ]
