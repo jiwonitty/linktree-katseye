@@ -1,14 +1,32 @@
 [
   {
     "nome": "PINKY UP",
-    "url": "https://youtu.be/...",
+    "url": "https://youtu.be/7F1ET2XHQfk?si=fuStnMmy4n9SZDIU",
     "imagem": "pinky.jpg",
     "destaque": true
   },
   {
     "nome": "Gabriela",
-    "url": "https://youtu.be/...",
+    "url": "https://youtu.be/co-TFLbaZAE?si=glp0_PFJWwqJhMWp",
     "imagem": "gabriela.jpg",
+    "destaque": false
+  },
+  {
+    "nome": "Gnarly",
+    "url": "https://youtu.be/R2-yomhYAj4?si=YstYu8B7hobSu40b",
+    "imagem": "gnarly.jpg",
+    "destaque": false
+  },
+  {
+    "nome": "Internet Girl",
+    "url": "https://youtu.be/5q9EjSUovc4?si=LWOXDsoqHbHNlRnc",
+    "imagem": "internet.jpg",
+    "destaque": false
+  },
+  {
+    "nome": "Gameboy",
+    "url": "https://youtu.be/-bC4iak3kxg?si=Dr75rllYABji1_RG",
+    "imagem": "gameboy.jpg",
     "destaque": false
   }
 ]
