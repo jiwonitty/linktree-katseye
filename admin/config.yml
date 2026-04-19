@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "/" 
+public_folder: "/"
+
+collections:
+  - name: "links"
+    label: "Meus Links"
+    folder: "/"
+    extension: "json"
+    format: "json"
+    create: true
+    identifier_field: "nome"
+    fields:
+      - {label: "Nome do Botão", name: "nome", widget: "string"}
+      - {label: "URL (Link)", name: "url", widget: "string"}
+      - {label: "Foto de Capa", name: "imagem", widget: "image"}
+      - {label: "Destaque (Rosa)?", name: "destaque", widget: "boolean", default: false}
+      - {label: "Classe de Cor", name: "classe", widget: "string", required: false}
