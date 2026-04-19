@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "PINKY UP",
+    "url": "https://spotify.com/...",
+    "destaque": true
+  },
+  {
+    "nome": "Instagram",
+    "url": "https://instagram.com/...",
+    "destaque": false
+  }
+]
